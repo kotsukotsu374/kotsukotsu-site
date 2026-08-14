@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>停滞期、それでも記録だけは止めない | KOTSUKOTSU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #14120F;
+    --bg-raised: #1C1915;
+    --line: rgba(245,241,232,0.14);
+    --paper: #F5F1E8;
+    --paper-dim: #A79E8E;
+    --tangerine: #FF6A2C;
+    --lemon: #F4C33C;
+  }
+  *{ box-sizing: border-box; margin:0; padding:0; }
+  html{ scroll-behavior: smooth; }
+  body{
+    background: var(--bg);
+    color: var(--paper);
+    font-family: 'Zen Kaku Gothic New', sans-serif;
+    line-height: 1.9;
+  }
+  a{ color: inherit; text-decoration: none; }
+  :focus-visible{ outline: 2px solid var(--tangerine); outline-offset: 3px; }
+
+  nav{
+    position: sticky; top: 0; z-index: 50;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px clamp(20px, 6vw, 64px);
+    border-bottom: 1px solid var(--line);
+    background: rgba(20,18,15,0.85);
+    backdrop-filter: blur(10px);
+  }
+  .logo{ font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem; letter-spacing: 0.14em; }
+  .logo span{ color: var(--tangerine); }
+  .back-link{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem; letter-spacing: 0.08em;
+    color: var(--paper-dim);
+    display: flex; align-items: center; gap: 8px;
+    transition: color 0.2s ease;
+  }
+  .back-link:hover{ color: var(--tangerine); }
+
+  article{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: clamp(48px, 8vw, 80px) clamp(20px, 6vw, 24px) clamp(80px, 10vw, 120px);
+  }
+
+  .meta{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--tangerine);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .meta::before{ content: ""; width: 22px; height: 1px; background: var(--tangerine); }
+
+  h1{
+    font-weight: 900;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  .lede{
+    color: var(--paper-dim);
+    font-size: 1.02rem;
+    border-left: 2px solid var(--tangerine);
+    padding-left: 20px;
+    margin-bottom: 44px;
+  }
+
+  .body-text p{ margin-bottom: 1.6em; font-size: 1rem; }
+  .body-text p:first-of-type::first-letter{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.6rem;
+    color: var(--tangerine);
+    float: left;
+    line-height: 0.8;
+    padding-right: 8px;
+    padding-top: 4px;
+  }
+
+  .pull-note{
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    padding: 24px 26px;
+    margin: 40px 0;
+    font-size: 0.92rem;
+    color: var(--paper-dim);
+  }
+  .pull-note .label{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--lemon);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .article-footer{
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .article-footer .tag{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--paper-dim);
+  }
+  .home-btn{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding: 12px 22px;
+    border: 1px solid var(--line);
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .home-btn:hover{ border-color: var(--tangerine); color: var(--tangerine); }
+
+  footer.site-footer{
+    padding: 36px clamp(20px, 6vw, 64px) 50px;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--paper-dim);
+    border-top: 1px solid var(--line);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">KOTSU<span>KOTSU</span></div>
+  <a class="back-link" href="../index.html">← TOP</a>
+</nav>
+
+<article>
+  <div class="meta">Daily Log · Vol. 001</div>
+  <h1>停滞期、それでも記録だけは止めない</h1>
+  <p class="lede">数字が動かない週がある。それでも記録をやめないことにした理由について。</p>
+
+  <div class="body-text">
+    <p>体重が3日間、同じ数字のまま動かなかった。正直、こういう週が一番つらい。頑張っているつもりなのに、結果がついてこないと「本当にこのままで合っているのか」と不安になる。</p>
+
+    <p>これまでの自分なら、ここで記録すること自体をやめてしまっていたと思う。数字が良くない日は見たくないし、書きたくもない。でも今回は、あえて「変わらなかった」という事実だけを、そのまま書いてみることにした。</p>
+
+    <div class="pull-note">
+      <span class="label">TODAY'S NOTE</span>
+      停滞期は「失敗」ではなく「体が慣れてきているサイン」でもある、と自分に言い聞かせている。
+    </div>
+
+    <p>停滞期にやっていることはシンプルで、食事の内容とトレーニングの頻度は変えず、いつも通り淡々と続けること。焦って極端なことをすると、大抵あとで反動が来るのを過去の経験で知っている。</p>
+
+    <p>今日書き残しておきたいのは、数字ではなく「止まっていても続けられた」という事実そのもの。多分これが、一番あとから振り返ったときに意味を持つ記録になる気がしている。</p>
+  </div>
+
+  <div class="article-footer">
+    <span class="tag">#停滞期 #記録 #継続</span>
+    <a class="home-btn" href="../index.html">TOPへ戻る</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <p>© 2026 KOTSUKOTSU — このサイトは匿名で運営しています。</p>
+</footer>
+
+</body>
+</html>

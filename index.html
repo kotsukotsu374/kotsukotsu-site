@@ -78,9 +78,26 @@
 
   /* ---------- HERO ---------- */
   .hero{
+    position: relative;
     padding: clamp(50px, 9vw, 90px) clamp(20px, 6vw, 64px) clamp(60px, 6vw, 80px);
     border-bottom: 1px solid var(--line);
+    overflow: hidden;
   }
+
+  .hero-photo{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image:
+      linear-gradient(90deg, var(--bg) 0%, rgba(20,18,15,0.6) 50%, rgba(20,18,15,0.9) 100%),
+      url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .hero-top, .hero-bottom{ position: relative; z-index: 1; }
 
   .hero-top{
     display: flex;
@@ -329,17 +346,18 @@
 </nav>
 
 <section class="hero">
+  <div class="hero-photo" aria-hidden="true"></div>
   <div class="hero-top">
     <div class="eyebrow">Daily Progress Journal</div>
     <div class="hero-date">VOL. 001<br>UPDATED DAILY</div>
   </div>
 
-  <h1>積み上げているのは、<br>体じゃなく<span class="accent">記録</span>。</h1>
+  <h1>積み重ねた行動が、いつか誰かの<span class="accent">勇気</span>になる。</h1>
 
   <div class="hero-bottom">
     <div>
       <p class="hero-sub">
-        ダイエットとトレーニングの過程を、顔を出さずに記録していくログ。
+        ダイエットとトレーニングの過程を、記録していくログ。
         感情の起伏も、停滞期も、そのまま言葉にして残しています。
       </p>
       <div class="cta-row">
@@ -378,7 +396,7 @@
         <h3>停滞期、それでも記録だけは止めない</h3>
         <p>数字が動かない週の過ごし方と、そのときの心境について。</p>
       </div>
-      <span class="go">READ →</span>
+      <a class="go" href="articles/post-1.html">READ →</a>
     </div>
     <div class="row-item">
       <span class="idx">02</span>
@@ -403,7 +421,7 @@
   <div class="sns-section">
     <div class="sns-copy">
       <h2>Follow the Log</h2>
-      <p>ブログの更新通知や日々の細かい記録はXで発信しています。顔出しなしで、ゆるくフォローしてもらえたら嬉しいです。</p>
+      <p>ブログの更新通知や日々の細かい記録はXで発信しています。ゆるくフォローしてもらえたら嬉しいです。</p>
     </div>
     <div class="sns-list">
       <a class="sns-item" href="#">
